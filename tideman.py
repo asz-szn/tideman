@@ -7,14 +7,14 @@ voters = []
 if len(sys.argv) <= 1:
     quit("Please Input Candidate Names")
 
-for i in range(1, len(sys.argv) - 1):
+for i in range(1, len(sys.argv)):
     candidates.append(sys.argv[i])
 
 votersCount = input("Number of voters? ")
 
 
 
-for i in range(1, int(votersCount)):
+for i in range(0, int(votersCount)):
     first = input("Rank 1: ")
     voters.append({"Vote1": first})
 
@@ -32,7 +32,7 @@ C2overC3 = 0
 C3overC1 = 0
 C3overC2 = 0
 
-for i in range(1, votersCount*3 - 1):
+for i in range(1, (len(votersCount) * 3) + 1):
     if voters[i]["Vote2"] == candidates[0]: #Candidate 1 in the middle
         if voters[i - 1]["Vote1"] == candidates[1]: #2 > 1 > 3
             C2overC1 += 1
