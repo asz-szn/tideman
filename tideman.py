@@ -1,5 +1,7 @@
 import sys
 
+print("ayaya")
+
 candidates = []
 
 voters = []
